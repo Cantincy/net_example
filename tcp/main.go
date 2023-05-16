@@ -29,6 +29,7 @@ func main() {
 			for i := 0; i < util.ClientNum; i++ {
 				buf := make([]byte, 100)
 				conns[i].Read(buf)
+				//fmt.Println(i)
 				log.Println("[Server]:", string(buf))
 
 				buf0 := []byte("response from server...")
